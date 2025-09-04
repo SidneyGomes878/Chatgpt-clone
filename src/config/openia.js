@@ -4,11 +4,11 @@ import OpenAI from "openai";
 module.exports = class openai {
 
     static configuration() {
-        const openai = new OpenAI({
+        const configuration = new configuration({
             apiKey: process.env.OPENAI_API_KEY,
         });
 
-        return new OpenAI
+        return new OpenAI(configuration);
     }
 
     static textCompletion({ prompt }) {
